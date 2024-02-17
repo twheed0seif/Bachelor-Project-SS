@@ -1,0 +1,342 @@
+---
+pagetitle: "Bachalor Project"
+page-layout: custom
+section-divs: false
+toc: false
+css: index.css
+editor: source
+description: | 
+  This is personal website mainly for hosting our Bachalor Project.
+hide-description: true
+image: quarto-dark-bg.jpeg
+resources: 
+  - images/hero_animation.webm
+---
+
+::: {.hero-banner}
+
+
+::: {.content-block}
+
+::: {.hero-text}
+# Welcome to M.Twheed and S.Ibrahim Bachelor Project
+
+### Our Goals
+
+- Explore the world of AI is the context of practical pump applications.
+- Digitize as much data from literature as possible.
+- Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+- Share knowledge and insights organization-wide by publishing to [Wolfram Function Repository](https://resources.wolframcloud.com/FunctionRepository), [Kaggle](https://www.kaggle.com/) and others. 
+
+### Analyze. Share. Reproduce. You have a story to tell with data.
+
+::: {.hero-buttons}
+[Get Started](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+::: 
+:::
+
+::: {.hero-animation}
+
+
+  <video autoplay muted playsinline loop style="transform: rotate(90deg)" >
+    <source src="images/hero_animation.webm" type="video/webm"/>
+  </video>
+
+:::
+
+:::
+
+
+:::
+
+
+::: {.hello-quarto .alt-background}
+::: {.content-block}
+
+::: {.hello-quarto-banner}
+# Programming Languages we use 
+<ul class="nav nav-pills" id="hello-quarto-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="Matlab-tab" data-bs-toggle="tab" data-bs-target="#Matlab" type="button" role="tab" aria-controls="Matlab" aria-selected="true">Matlab</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Python-tab" data-bs-toggle="tab" data-bs-target="#Python" type="button" role="tab" aria-controls="Python" aria-selected="false">Python</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="julia-tab" data-bs-toggle="tab" data-bs-target="#julia" type="button" role="tab" aria-controls="julia" aria-selected="false">Julia</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Wolfram-tab" data-bs-toggle="tab" data-bs-target="#Wolfram" type="button" role="tab" aria-controls="Wolfram" aria-selected="false">Wolfram</button>
+  </li>
+</ul>
+:::
+
+<div class="tab-content" id="hello-quarto-tabcontent">
+
+<div class="tab-pane fade  show active" id="Matlab" role="tabpanel" aria-labelledby="Matlab-tab">
+
+Matlab .
+
+::: {.grid}
+::: {.g-col-lg-6 .g-col-12}
+![](images/demo-jupyter-plain.png){.hello-output fig-alt="Example Jupyter notebook entitled Palmer Penguins with code cells, text, and a scatterplot." height="605"}
+:::
+
+::: {.g-col-lg-6 .g-col-12 style="background-color: white; border: 1px solid #dee2e6; height: 605px;"}
+![](images/demo-jupyter-output.png){fig-alt="Output of example Jupyter notebook, Palmer Penguins, in HTML showing title, metadata, text, code, and scatterplot. At the top there is a dropdown option to show or hide the code."}
+:::
+:::
+
+</div>
+
+<div class="tab-pane fade" id="Python" role="tabpanel" aria-labelledby="Python-tab">
+
+Python
+
+::: {.grid}
+::: {.g-col-lg-6 .g-col-12}
+````markdown
+---
+title: "ggplot2 demo"
+author: "Norah Jones"
+date: "5/22/2021"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+
+## Air Quality
+
+@fig-airquality further explores the impact of temperature on ozone level.
+
+```{{r}}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+
+````
+:::
+
+::: {.g-col-lg-6 .g-col-12}
+![](images/hello-knitr.png){.hello-output fig-alt="Example output with title (ggplot2 demo), author (Norah Jones), and date (5/22/2021). Below is a header reading Air Quality followed by body text (Figure 1 further explores the impact of temperature on ozone level.) with a toggleable code field, and figure with caption Figure 1 Temperature and ozone level."}
+:::
+:::
+
+</div>
+
+<div class="tab-pane fade" id="julia" role="tabpanel" aria-labelledby="julia-tab">
+
+Combine markdown and Julia code to create dynamic documents that are fully reproducible. Quarto executes Julia code via the [IJulia](https://github.com/JuliaLang/IJulia.jl) Jupyter kernel, enabling you to author in plain text (as shown below) or render existing Jupyter notebooks.
+
+::: {.grid}
+::: {.g-col-lg-6 .g-col-12}
+````markdown
+---
+title: "Plots Demo"
+author: "Norah Jones"
+date: "5/22/2021"
+format:
+  html:
+    code-fold: true
+jupyter: julia-1.8
+---
+
+## Parametric Plots
+
+Plot function pair (x(u), y(u)). 
+See @fig-parametric for an example.
+
+```{{julia}}
+#| label: fig-parametric
+#| fig-cap: "Parametric Plots"
+
+using Plots
+
+plot(sin, 
+     x->sin(2x), 
+     0, 
+     2π, 
+     leg=false, 
+     fill=(0,:lavender))
+```
+
+
+````
+:::
+
+::: {.g-col-lg-6 .g-col-12}
+![](images/hello-julia.png){.hello-output fig-alt="Example Plots Demo output with title, author, date published and main section on Parametric plots which contains text, a toggleable code field, and the output of the plot, with the caption Figure 1 Parametric Plots."}
+:::
+:::
+
+</div>
+
+<div class="tab-pane fade" id="Wolfram" role="tabpanel" aria-labelledby="Wolfram-tab">
+
+Wolfram.
+
+
+
+::: {.grid}
+::: {.g-col-lg-6 .g-col-12}
+````markdown
+---
+title: "observable plot"
+author: "Norah Jones"
+format: 
+  html: 
+    code-fold: true
+---
+
+## Seattle Precipitation by Day (2012 to 2016)
+
+```{{ojs}}
+data = FileAttachment("seattle-weather.csv")
+  .csv({typed: true})
+  
+Plot.plot({
+  width: 800, height: 500, padding: 0,
+  color: { scheme: "blues", type: "sqrt"},
+  y: { tickFormat: i => "JFMAMJJASOND"[i] },
+  marks: [
+    Plot.cell(data, Plot.group({fill: "mean"}, {
+      x: d => new Date(d.date).getDate(),
+      y: d => new Date(d.date).getMonth(),
+      fill: "precipitation", 
+      inset: 0.5
+    }))
+  ]
+})
+```
+````
+:::
+
+
+::: {.g-col-lg-6 .g-col-12}
+![](images/hello-observable.png){style="background-color: white; border: 1px solid #dee2e6; height: 625px;" fig-alt="Example output with title, author, and date. Below, the main section reads Seattle Precipitation by Day (2012 to 2016) with a toggleable section to show code and a heatmap of the precipitation by day."}
+:::
+
+
+:::
+
+</div>
+
+</div>
+
+
+
+::: {.grid}
+
+
+:::
+:::
+:::
+
+
+::: {.content-block}
+::: {.features}
+
+::: {.feature}
+### Papers From dr Farid
+Here is a registery of all paper supplied to us by dr farid.
+
+::: {.learn-more}
+[Learn more »](docs/DrFaridPapers/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Papers Found By us
+our papers.
+
+::: {.learn-more}
+[Learn more »](docs/OurPapers/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Slides 
+Slides.
+
+::: {.learn-more}
+[Learn more »](docs/Slides/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Draft Papers
+our draft papers.
+
+::: {.learn-more}
+[Learn more »](docs/DraftPapers/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Figures
+Figures.
+
+::: {.learn-more}
+[Learn more »](docs/Figures/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Books
+Books.
+
+::: {.learn-more}
+[Learn more »](docs/Books/Registery.qmd)
+:::
+:::
+
+
+::: {.feature}
+### Websites
+Websites.
+
+::: {.learn-more}
+[Learn more »](docs/Websites/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Software Tools we use
+tools we use.
+
+::: {.learn-more}
+[Learn more »](docs/SoftwareUsedByUs/Registery.qmd)
+:::
+:::
+
+::: {.feature}
+### Software We Create
+Software.
+
+::: {.learn-more}
+[Learn more »](docs/SoftwareCreatedByUs/Registery.qmd)
+:::
+:::
+
+:::
+:::
+
+
+::: {.get-started .alt-background}
+::: {.content-block}
+
+[Get Started](docs/get-started/index.html){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
+
+:::
+:::
+

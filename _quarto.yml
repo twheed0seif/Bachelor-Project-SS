@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Bachelor Project"
+  repo-url: https://github.com/twheed0seif/Bachelor-Project-SS
+  issue-url: https://github.com/twheed0seif/Bachelor-Project/issues/new/choose
+  repo-actions: [edit, issue]
+  search: true
+  page-footer:
+    center: |
+      Proudly supervised by prof. dr. Mohamed Farid Khalil
+      [![](drfarid.svg){fig-alt="prof. dr. Mohamed Farid Khalil" width=50px style="border-radius: 50%; overflow: hidden;"}](https://scholar.google.com.eg/citations?user=JebIw2QAAAAJ&hl=en)
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
