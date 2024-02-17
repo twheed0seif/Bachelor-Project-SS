@@ -5,7 +5,7 @@ project:
 website:
   title: "Bachelor Project"
   repo-url: https://github.com/twheed0seif/Bachelor-Project-SS
-  issue-url: https://github.com/twheed0seif/Bachelor-Project/issues/new/choose
+  issue-url: https://github.com/twheed0seif/Bachelor-Project-SS/issues/new/choose
   repo-actions: [edit, issue]
   search: true
   page-footer:
