@@ -2,8 +2,22 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "بص هنا اريس",
     "section": "",
-    "text": "About this site"
+    "text": "import plotly.express as px\ndf = px.data.gapminder()\ndf = df[df['continent'] != 'Oceania']"
+  },
+  {
+    "objectID": "about.html#row",
+    "href": "about.html#row",
+    "title": "بص هنا اريس",
+    "section": "Row",
+    "text": "Row\n\npx.scatter(\n  df, x=\"gdpPercap\", y=\"lifeExp\", \n  animation_frame=\"year\", animation_group=\"country\",\n  size=\"pop\", color=\"continent\", hover_name=\"country\", \n  facet_col=\"continent\", log_x=True, size_max=45, \n  range_x=[100,100000], range_y=[25,90]\n)"
+  },
+  {
+    "objectID": "about.html#row-1",
+    "href": "about.html#row-1",
+    "title": "بص هنا اريس",
+    "section": "Row",
+    "text": "Row\n\npx.area(df, x=\"year\", y=\"pop\", color=\"continent\", line_group=\"country\")\n\n                                                \n\n\n\npx.line(df, x=\"year\", y=\"lifeExp\", color=\"continent\", line_group=\"country\")"
   }
 ]
